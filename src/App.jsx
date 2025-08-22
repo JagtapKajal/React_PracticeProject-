@@ -41,14 +41,17 @@ const App = () => {
 
       <Router>
         <Routes>
-          <Route path="/Home" element={<Home />} />
-          <Route path="/COntact" element={<Contact />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Product" element={<Product />} />
-          <Route path="/Team " element={<Team />} />
-          <Route path="/cources " element={<DynamicRouting />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/team" element={<Team />} />
 
-          <Route path="/cources/:id " element={<Course_Details />} />
+          {/* Course list page */}
+          <Route path="/courses" element={<DynamicRouting />} />
+
+          {/* Course details page */}
+          <Route path="/courses/:id" element={<Course_Details />} />
         </Routes>
       </Router>
     </>

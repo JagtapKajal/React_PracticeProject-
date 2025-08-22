@@ -4,13 +4,13 @@ import { useParams } from 'react-router-dom'
 const Course_Details = () => {
 
       const arr = [
-    { id: "J001", CourceName: "java", price: 50000, 
+    { id: "J001", CourseName: "java", price: 50000, 
 duration: "6 months" },
-    { id: "R002", CourceName: "React", price: 50000, 
+    { id: "R002", CourseName: "React", price: 50000, 
 duration: "6 months" },
-    { id: "P003", CourceName: "Python", price: 50000, 
+    { id: "P003", CourseName: "Python", price: 50000, 
 duration: "6 months" },
-    { id: "H004", CourceName: "HTML", price: 50000, 
+    { id: "H004", CourseName: "HTML", price: 50000, 
 duration: "6 months" },
   ];
     const {id} = useParams()
@@ -18,8 +18,8 @@ duration: "6 months" },
     const Course_Details = arr.filter((data) => data.id == id)
   return (
     <div>
-      <h1>Cource id = {id}</h1>
-      <h2>Cource Name = </h2>
+      <h1>Course id = {id}</h1>
+      <h2> </h2>
     </div>
   )
 }
