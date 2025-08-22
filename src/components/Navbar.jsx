@@ -1,9 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
+const navigate = useNavigate()
+    const login = () =>{
+        setIsLoggedIn(true)
+        navigate('/dashboard')
+        const logout =() => {
+            setIsLoggedIn(false)
+        }
+    }
   return (
     <nav className="navbar">
       <div className="left">
@@ -14,6 +22,9 @@ const Navbar = () => {
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/courses">Courses</Link>
+         <Link to="/dashboard">Dashboard</Link>
+  <Link to="login">Login</Link>
+ <Link to="logout">LogOut</Link>
       </div>
     </nav>
   );
