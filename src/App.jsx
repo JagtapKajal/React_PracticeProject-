@@ -17,6 +17,7 @@ import Team from "./Pages/Team";
 import Product from "./Pages/Product";
 import DynamicRouting from "./Pages/DynamicRouting";
 import Course_Details from "./Pages/Course_Details";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
       {/* <FormHandling/> */}
 
       <Router>
+        <Navbar/>
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
