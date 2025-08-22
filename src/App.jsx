@@ -18,7 +18,8 @@ import Product from "./Pages/Product";
 import DynamicRouting from "./Pages/DynamicRouting";
 import Course_Details from "./Pages/Course_Details";
 import Navbar from "./components/Navbar";
-
+import Dashboard from "./Pages/Dashboard";
+import Profile from "./Pages/Profile";
 const App = () => {
   return (
     <>
@@ -54,6 +55,8 @@ const App = () => {
 
           {/* Course details page */}
           <Route path="/courses/:id" element={<Course_Details />} />
+          <Route path="/Profile" element ={<Profile/>}/>
+          <Route path="/Dashboard" element ={<Dashboard/>}/>
         </Routes>
       </Router>
     </>

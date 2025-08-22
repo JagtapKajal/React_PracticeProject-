@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
     <nav className="navbar">
       <div className="left">
