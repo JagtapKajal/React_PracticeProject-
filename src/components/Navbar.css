@@ -1,5 +1,24 @@
-.Navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: #222; */
+  padding: 12px 24px;
+  background-color: rgb(255, 127, 140);
+}
+
+.navbar .left h2 {
+  color: white;
+  margin: 0;
+}
+
+.navbar .right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.navbar .right a:hover {
+  color: #61dafb; /* React blue */
 }
