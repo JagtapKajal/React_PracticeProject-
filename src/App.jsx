@@ -8,6 +8,7 @@ import Map from "./components/Map";
 import Filter from "./components/Filter";
 import FetchDataAPI from "./components/FetchDataAPI";
 import FormHandling from "./components/FormHandling";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -15,6 +16,7 @@ import Contact from "./Pages/Contact";
 import Team from "./Pages/Team";
 import Product from "./Pages/Product";
 import DynamicRouting from "./Pages/DynamicRouting";
+import Course_Details from "./Pages/Course_Details";
 
 const App = () => {
   return (
@@ -44,12 +46,11 @@ const App = () => {
           <Route path="/About" element={<About />} />
           <Route path="/Product" element={<Product />} />
           <Route path="/Team " element={<Team />} />
-          <Route path="/DynamicRouting " element={<Team />} />
-          
-          <Route path="/cources/:id " element={<CourcesR />} />
+          <Route path="/cources " element={<DynamicRouting />} />
+
+          <Route path="/cources/:id " element={<Course_Details />} />
         </Routes>
       </Router>
-      <DynamicRouting/>
     </>
   );
 };
