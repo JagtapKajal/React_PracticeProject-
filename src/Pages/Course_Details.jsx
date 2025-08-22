@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 
 const Course_Details = () => {
 
@@ -14,13 +14,25 @@ duration: "6 months" },
 duration: "6 months" },
   ];
     const {id} = useParams()
+    const location = useLocation();
 
     const Course_Details = arr.filter((data) => data.id == id)
   return (
+    <>
     <div>
       <h1>Course id = {id}</h1>
-      <h2> </h2>
+      <h3>Course Name = {Course_Details[0].CourseName}</h3>
+      {location.pathname != "/courses/J001" && (
+      <>
+      <h3>Course price = {Course_Details[0].price}</h3>
+      <h3>duration = {Course_Details[0].duration}</h3>
+      </>)}
     </div>
+    <button>
+    <Link to={"/courses"} style={{testDecoration: "none", color: "black"}}>
+    All Courses </Link>
+    </button>
+    </>
   )
 }
 
