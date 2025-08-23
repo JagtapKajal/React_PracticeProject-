@@ -1,24 +1,36 @@
 .navbar {
+  background-color: #333; 
+  color: white;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: #222; */
-  padding: 12px 24px;
-  background-color: rgb(255, 127, 140);
+
+  position: fixed;   
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
 }
 
 .navbar .left h2 {
-  color: white;
-  margin: 0;
+  margin: 0;             
+  padding: 0;
 }
 
 .navbar .right a {
-  color: white;
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
+  padding: 0;
 }
 
 .navbar .right a:hover {
-  color: #61dafb; /* React blue */
+  color: #61dafb; 
+}
+
+body {
+  margin: 0;
+  padding-top: 65px;  
 }
