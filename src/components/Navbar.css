@@ -1,49 +1,55 @@
 .navbar {
-  background-color: #333; 
+  background-color: #333;
   color: white;
   padding: 15px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  position: fixed;   
-   top: 0;
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  min-height: 70px;     /* ensure enough height */
+  min-height: 70px;
+  /* ensure enough height */
   z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
-    overflow: hidden; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 .navbar .left h2 {
-  margin: 0;             
+  margin: 0;
   padding: 0;
-   color: white;
+  color: white;
   font-size: 22px;
   background: none;
 }
+
 .navbar .right {
-  display: flex; /* arrange links horizontally */
-  gap: 15px;     /* space between links */
+  display: flex;
+  /* arrange links horizontally */
+  gap: 15px;
+  /* space between links */
 }
 
 .navbar .right a {
-   text-decoration: none;
+  text-decoration: none;
   font-weight: 400;
   color: white;
-  background: none; 
-   white-space: nowrap; /* remove black box */
-  padding: 10px 16px; /* clickable padding */
+  background: none;
+  white-space: nowrap;
+  /* remove black box */
+  padding: 10px 16px;
+  /* clickable padding */
   border-radius: 4px;
-  display: inline-block; 
+  display: inline-block;
 }
 
 .navbar .right a:hover {
-  color: #61dafb; 
+  color: #61dafb;
 }
 
 body {
   margin: 0;
-  padding-top: 65px;  
+  padding-top: 65px;
 }
