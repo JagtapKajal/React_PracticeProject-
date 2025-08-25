@@ -20,7 +20,13 @@ import Course_Details from "./Pages/Course_Details";
 import Navbar from "./components/Navbar";
 import Dashboard from "./Pages/Dashboard";
 import Profile from "./Pages/Profile";
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment, incrementBy10 } from "./Redux/counterSlice";
+
 const App = () => {
+  // this is redux command
+  const counter = useSelector((state) => state.counter.counter);
+  const dispatch = useDispatch();
   return (
     <>
       {/* <User/>  parent component */}
@@ -42,7 +48,7 @@ const App = () => {
       {/* <FormHandling/> */}
 
       <Router>
-        <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
@@ -55,10 +61,12 @@ const App = () => {
 
           {/* Course details page */}
           <Route path="/courses/:id" element={<Course_Details />} />
-          <Route path="/profile" element ={<Profile/>}/>
-          <Route path="/dashboard" element ={<Dashboard/>}/>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
+
+      <h1>{counter}</h1>
     </>
   );
 };
